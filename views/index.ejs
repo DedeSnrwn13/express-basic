@@ -7,7 +7,11 @@
     <title>Express Basic</title>
   </head>
   <body>
-    <p>Nama saya Doli</p>
-    <p>Umur 30 tahun</p>
+    <p>Nama saya <%= name %></p>
+    <p>Umur <%= age %> tahun</p>
+
+    <% for(let i = 0; i < fruit.length; i++) { %>
+    <p><%= fruit[i].name %></p>
+    <% } %>
   </body>
 </html>

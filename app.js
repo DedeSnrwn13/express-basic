@@ -6,7 +6,13 @@ app.set("views", "./views"); // specify the views directory
 app.set("view engine", "ejs"); // register the template engine
 
 app.get("/", (req, res) => {
-  res.render("index");
+  const fruit = [{ name: "Apel" }, { name: "Jeruk" }, { name: "Pepaya" }];
+
+  res.render("index", {
+    name: "Doni",
+    age: 10,
+    fruit: fruit,
+  });
 });
 
 app.get("/:name", (req, res) => {
